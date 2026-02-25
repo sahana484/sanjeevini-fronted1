@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sanjeevani</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <h1>Project Sanjeevani</h1>
+  <p class="tagline">AI Preventive Healthcare</p>
+
+  <div class="card">
+    <h2>Enter Symptoms</h2>
+    <textarea id="symptoms" placeholder="Type your symptoms..."></textarea>
+    <button onclick="analyze()">Analyze Risk</button>
+  </div>
+
+  <div class="card hidden" id="resultCard">
+    <h2>Risk Result</h2>
+    <p id="riskText"></p>
+    <button onclick="sendEmergency()">Emergency Help</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
