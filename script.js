@@ -1,22 +1,23 @@
 function analyze() {
-  const text = document.getElementById("symptoms").value;
+  const text = document.getElementById("symptoms").value.toLowerCase();
+  const resultBox = document.getElementById("resultBox");
+  const riskText = document.getElementById("riskText");
 
-  if (text.length < 5) {
-    alert("Please enter symptoms");
+  if (text.trim().length < 3) {
+    alert("Please enter valid symptoms");
     return;
   }
 
   let risk = "Low Risk";
 
-  if (text.toLowerCase().includes("chest") ||
-      text.toLowerCase().includes("breath")) {
-    risk = "High Risk. Consult doctor.";
+  if (text.includes("chest") || text.includes("breathing") || text.includes("severe")) {
+    risk = "High Risk. Seek medical help.";
   }
 
-  document.getElementById("riskText").innerText = risk;
-  document.getElementById("resultCard").classList.remove("hidden");
+  riskText.innerText = risk;
+  resultBox.classList.remove("hidden");
 }
 
 function sendEmergency() {
-  alert("Emergency alert sent to nearest health worker.");
+  alert("Emergency alert sent to nearest hospital.");
 }

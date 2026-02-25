@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sanjeevani</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanjeevani AI Healthcare</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<div class="app">
+  <header class="navbar">
+    <div class="logo">🩺 Sanjeevani</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Doctors</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-  <h1>Project Sanjeevani</h1>
-  <p class="tagline">AI Preventive Healthcare</p>
+  <section class="hero">
+    <h1>AI Powered Preventive Healthcare</h1>
+    <p>Early risk detection. Smart emergency support. Built for rural impact.</p>
+  </section>
 
-  <div class="card">
-    <h2>Enter Symptoms</h2>
-    <textarea id="symptoms" placeholder="Type your symptoms..."></textarea>
+  <section class="card">
+    <h2>Symptom Checker</h2>
+
+    <textarea id="symptoms" placeholder="Type symptoms like fever, cough, chest pain..."></textarea>
+
     <button onclick="analyze()">Analyze Risk</button>
-  </div>
 
-  <div class="card hidden" id="resultCard">
-    <h2>Risk Result</h2>
-    <p id="riskText"></p>
-    <button onclick="sendEmergency()">Emergency Help</button>
-  </div>
+    <div id="resultBox" class="result hidden">
+      <h3>Risk Result</h3>
+      <p id="riskText">Low Risk</p>
+      <button class="emergency" onclick="sendEmergency()">Emergency Help</button>
+    </div>
+  </section>
 
-</div>
+  <footer class="footer">
+    <p>© 2026 Sanjeevani AI Healthcare</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
